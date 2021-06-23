@@ -1,0 +1,274 @@
+:root {
+  /* purple */
+  --darkPurple: rgb(41, 0, 75);
+  --darkPurpleHover: rgb(61, 9, 104);
+  --purple: rgb(80, 27, 122);
+
+  /* white */
+  --mainBackground: rgb(241, 243, 245);
+  --background: rgb(246, 249, 252);
+  --background2: #fafbfc;
+
+  /* blue */
+  --darkBlue: #5271ff;
+  --darkBlueHover: #5271ff88;
+  --blueHover: rgb(10, 70, 228);
+  --blue: rgb(22, 82, 240);
+  --blue2: #2f5dfb;
+  --lightBlue: rgb(0, 204, 255);
+
+  /* orange */
+  --orange: rgb(255, 196, 0);
+  --darkorange: #ff7f2e;
+
+  /* yellow */
+  --yellow: #ffeb4d;
+  --darkyellow: #feba2b;
+  /* red */
+  --red: #ff4631;
+
+  /* green */
+  --pastelgreen: #1bb778;
+
+  /* black */
+  --darkbackground: #1a1a1a;
+}
+
+body {
+  width: 95%;
+  min-height: 95vh;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  font-weight: 100;
+  font-size: 24px;
+}
+
+.container {
+  width: 95%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 90%;
+  height: 90vh;
+
+  border-radius: 8px;
+
+  position: absolute;
+
+  z-index: -100;
+
+  background-image: url(./plane.jpg);
+  background-size: cover;
+
+  filter: grayscale(0.7);
+}
+
+.tickets-area {
+  width: 80%;
+  height: 80vh;
+
+  z-index: 100;
+
+  background-color: rgba(10, 70, 228, 0.2);
+}
+
+.tickets-top {
+  width: 100%;
+  height: 20vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tickets-top * {
+  display: inline-flex;
+}
+
+.top-side i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.top-side {
+  padding: 8px;
+  font-weight: normal;
+  font-size: 24px;
+
+  margin-left: 96px;
+  margin-right: 96px;
+}
+
+.tickets-container {
+  width: 100%;
+  min-height: 30vh;
+
+  text-align: center;
+
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.date-table {
+  max-width: 356px;
+  min-height: 30vh;
+  margin-left: 30%;
+
+  overflow-x: hidden;
+
+  display: flex;
+
+  margin-top: 24px;
+
+  background-color: rgba(241, 243, 245, 0.4);
+
+  border-radius: 8px;
+}
+
+.date-month {
+  width: 100%;
+  min-height: 30vh;
+
+  transition: 500ms;
+}
+
+.date-top {
+  width: 356px;
+  min-height: 5vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid var(--darkbackground);
+}
+
+.current-month {
+  width: 128px;
+  text-align: center;
+
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 24px;
+  margin-right: 24px;
+
+  font-size: 20px;
+
+  transition: 250ms;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 24px;
+}
+
+.date-days {
+  width: 356px;
+  height: 25vh;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date-day {
+  width: calc(100% / 7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  user-select: none;
+}
+
+.date-day:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.selected-day {
+  background: rgba(10, 70, 228, 0.5);
+}
+
+.selected-day:hover {
+  background: rgba(10, 70, 228, 0.5);
+}
+
+.hovered-day {
+  background: rgba(10, 70, 228, 0.2);
+}
+
+.hovered-day:hover {
+  background: rgba(10, 70, 228, 0.2);
+}
+
+.reset-btn {
+  width: 10%;
+  height: 32px;
+  margin-left: 45%;
+
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 250ms;
+
+  font-size: 16px;
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.reset-btn:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+  color: white;
+}
+
+.text {
+  font-weight: 300;
+}
+
+* {
+  font-weight: 300;
+}
+
+.date-day {
+  font-weight: 100;
+}
+
+@keyframes flashAnimation {
+  0% {
+    filter: blur(4px);
+  }
+
+  100% {
+    filter: blur(0);
+  }
+}

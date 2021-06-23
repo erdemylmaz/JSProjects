@@ -1,0 +1,96 @@
+:root {
+  /* purple */
+  --darkPurple: rgb(41, 0, 75);
+  --darkPurpleHover: rgb(61, 9, 104);
+  --purple: rgb(80, 27, 122);
+
+  /* white */
+  --mainBackground: rgb(241, 243, 245);
+  --background: rgb(246, 249, 252);
+  --background2: #fafbfc;
+
+  /* blue */
+  --blue: #5271ff;
+  --darkBlue: #5271ff88;
+  --hoverBlue: rgb(10, 70, 228);
+  --brightBlue: rgb(22, 82, 240);
+
+  /* orange */
+  --orange: rgb(255, 196, 0);
+}
+
+body {
+  width: 95%;
+  min-height: 95vh;
+  margin-left: 2.5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  width: 75%;
+  min-height: 512px;
+  background-color: var(--brightBlue);
+  color: var(--mainBackground);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.count {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 36px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  margin-right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--mainBackground);
+  border-radius: 4px;
+  transition: 250ms;
+
+  user-select: none;
+}
+
+.reset-btn {
+  width: 96px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 1px solid var(--brightBlue);
+  color: var(--brightBlue);
+  background-color: var(--mainBackground);
+}
+
+.increase {
+  color: rgb(0, 216, 0);
+}
+
+.decrease {
+  color: rgb(255, 64, 64);
+}

@@ -1,0 +1,158 @@
+:root {
+  /* purple */
+  --darkPurple: rgb(41, 0, 75);
+  --darkPurpleHover: rgb(61, 9, 104);
+  --purple: rgb(80, 27, 122);
+
+  /* white */
+  --mainBackground: rgb(241, 243, 245);
+  --background: rgb(246, 249, 252);
+  --background2: #fafbfc;
+
+  /* blue */
+  --blue: #5271ff;
+  --darkBlue: #5271ff88;
+  --hoverBlue: rgb(10, 70, 228);
+  --brightBlue: rgb(22, 82, 240);
+
+  /* orange */
+  --orange: rgb(255, 196, 0);
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.header {
+  width: 100%;
+  min-height: 64px;
+  background-color: var(--mainBackground);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header {
+  width: 100%;
+  min-height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-icon {
+  display: none;
+  margin-right: 48px;
+
+  transition: 250ms;
+}
+
+.container {
+  width: 100%;
+  min-height: 50vh;
+
+  background-color: var(--brightBlue);
+  color: var(--mainBackground);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: var(--mainBackground);
+}
+
+.menu-item:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.active {
+  transform: rotate(90deg);
+  color: var(--orange);
+}
+
+.active:hover {
+  color: var(--orange);
+}
+
+.r-menu {
+  width: 100%;
+  height: auto;
+}
+
+.r-menu-item {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  transition: 500ms;
+}
+
+.show-item {
+  height: 64px;
+}
+
+.r-menu-item:hover {
+  background-color: var(--orange);
+  color: var(--mainBackground);
+}
+
+.r-menu-item:hover .m-i {
+  margin-left: 64px;
+}
+
+.m-i {
+  margin-left: 48px;
+  transition: 250ms;
+}
+
+.navbar-icon:hover {
+  color: var(--orange);
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.name {
+  margin-right: auto;
+  margin-left: 48px;
+}
+
+.menu {
+  margin-right: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  margin-left: 12px;
+  margin-right: 12px;
+
+  transition: 250ms;
+}
+
+@media only screen and (max-width: 920px) {
+  .menu {
+    display: none;
+  }
+
+  .navbar-icon {
+    display: flex;
+  }
+}
